@@ -11,14 +11,24 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 import com.sun.mail.util.MailSSLSocketFactory;
+/**
+ * 
 
+ * @ClassName: SendEmailUtil
+
+ * @Description: 发送邮件工具类
+
+ * @author: Mr.Yang
+
+ * @date: 2017年8月28日 下午4:50:35
+ */
 public class SendEmailUtil {
 	/**
 	 * 
 	 * 
 	 * @Title: sendEmail
 	 * 
-	 * @Description: 发送邮件工具类
+	 * @Description: 发送邮件工具类方法
 	 * 
 	 * @param sendEmail
 	 *            发件人地址
@@ -124,7 +134,7 @@ public class SendEmailUtil {
 		 * @param toEmilAddress
 		 *            收件人地址
 		 */
-		SendEmailUtil.sendEmail("815150141@qq.com", "ddwevrawiidsbffi", "testEmail", "testcontent",
+		SendEmailUtil.sendEmail("815150141@qq.com", "zdwhvrawiidsbffi", "testEmail", "testcontent",
 				new String[] { "yswcomeon@gmail.com", "815150141@qq.com" });
 	}
 }

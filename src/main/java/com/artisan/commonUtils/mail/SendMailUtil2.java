@@ -6,7 +6,6 @@ import java.security.GeneralSecurityException;
 import java.util.Properties;
 
 import javax.mail.Address;
-import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Session;
 import javax.mail.Transport;
@@ -15,7 +14,17 @@ import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeUtility;
 
 import com.sun.mail.util.MailSSLSocketFactory;
+/**
+ * 
 
+ * @ClassName: SendMailUtil2
+
+ * @Description: 发送邮件工具类
+
+ * @author: Mr.Yang
+
+ * @date: 2017年8月28日 下午4:50:17
+ */
 public class SendMailUtil2 {
 	 /**
      * Message对象将存储我们实际发送的电子邮件信息，
@@ -84,7 +93,7 @@ public class SendMailUtil2 {
      *            收件人地址
      */
     public void doSendHtmlEmail(String subject, String emailContent,
-            String[] toEmilAddress) {
+            String[] toEmailAddress) {
         try {
             // 发件人
             //InternetAddress from = new InternetAddress(sender_username);
@@ -107,7 +116,7 @@ public class SendMailUtil2 {
             transport.connect(mailHost, sender_username, sender_password);
          
             // 发送
-            transport.sendMessage(message,  getAddress(toEmilAddress));
+            transport.sendMessage(message,  getAddress(toEmailAddress));
             
             System.out.println("send email successfully ");
         } catch (Exception e) {

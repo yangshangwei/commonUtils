@@ -5,3 +5,18 @@
 	
 	
 2. SendMailUtil2.java 将配置信息提取到了properties文件中，其余同1一样
+
+实现java发送邮件的过程大体有以下几个步骤：
+a.准备一个properties文件，该文件中存放SMTP服务器地址等参数。(直接设置也可以)
+b.利用properties创建一个Session对象
+c.利用Session创建Message对象，然后设置邮件主题和正文
+d.利用Transport对象发送邮件
+
+依赖包的maven地址：
+	<!-- https://mvnrepository.com/artifact/com.sun.mail/javax.mail -->
+		<dependency>
+			<groupId>com.sun.mail</groupId>
+			<artifactId>javax.mail</artifactId>
+			<version>${javax.mail.version}</version>
+		</dependency>
+

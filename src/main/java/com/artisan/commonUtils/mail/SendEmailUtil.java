@@ -4,6 +4,7 @@ import java.util.Properties;
 
 import javax.mail.Address;
 import javax.mail.Message;
+import javax.mail.MessagingException;
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
@@ -67,9 +68,29 @@ public class SendEmailUtil {
 		transport.connect("smtp.qq.com", sendEmail, sendEmailPwd);
 		// 发送到的邮箱地址
 		transport.sendMessage(msg, getAddress(toEmilAddress));
-		transport.close();
+		
+		if(transport!=null){
+             try {
+                 transport.close();
+             } catch (MessagingException e) {
+                 e.printStackTrace();
+             }
+         }
 	}
-
+	
+	 /**
+     * 
+    
+     * @Title: getAddress
+    
+     * @Description: 遍历收件人信息
+    
+     * @param emilAddress
+     * @return
+     * @throws Exception
+    
+     * @return: Address[]
+     */
 	private static Address[] getAddress(String[] emilAddress) throws Exception {
 		Address[] address = new Address[emilAddress.length];
 		for (int i = 0; i < address.length; i++) {
@@ -95,7 +116,7 @@ public class SendEmailUtil {
 		 * * @param sendEmail 发件人地址
 		 * 
 		 * @param sendEmailPwd
-		 *            授权码代替密码（更安全）
+		 *            授权码代替密码（更安全） 
 		 * @param title
 		 *            邮件标题
 		 * @param content

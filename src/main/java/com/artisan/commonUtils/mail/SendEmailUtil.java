@@ -124,7 +124,7 @@ public class SendEmailUtil {
 		 * @param toEmilAddress
 		 *            收件人地址
 		 */
-		SendEmailUtil.sendEmail("815150141@qq.com", "zdwhvrawiidsbffi", "testEmail", "testcontent",
+		SendEmailUtil.sendEmail("815150141@qq.com", "ddwevrawiidsbffi", "testEmail", "testcontent",
 				new String[] { "yswcomeon@gmail.com", "815150141@qq.com" });
 	}
 }

@@ -1,4 +1,4 @@
-package com.artisan.commonUtils.createFile;
+package com.artisan.commonUtils.files;
 
 import java.io.File;
 import java.io.IOException;

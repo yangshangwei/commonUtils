@@ -148,6 +148,7 @@ public class CopyUtil {
 	 * 
 	 * @return: void
 	 */
+
 	public static void main(String[] args) {
 		File sourceDir = new File("D:/图片素材");
 		File destDir = new File("H:/图片素材Copy");

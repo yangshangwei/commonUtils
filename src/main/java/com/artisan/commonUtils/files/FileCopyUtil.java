@@ -42,7 +42,7 @@ import java.nio.channels.FileChannel;
  * 
  */
 
-public class CopyUtil {
+public class FileCopyUtil {
 
 	/**
 	 * Copy a whole directory to another location.
@@ -154,7 +154,7 @@ public class CopyUtil {
 		File destDir = new File("H:/图片素材Copy");
 
 		try {
-			CopyUtil.copyDirectory(sourceDir, destDir);
+			FileCopyUtil.copyDirectory(sourceDir, destDir);
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		}

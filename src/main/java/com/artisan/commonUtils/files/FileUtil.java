@@ -3,7 +3,7 @@ package com.artisan.commonUtils.files;
 import java.io.File;
 import java.io.IOException;
 
-public class CreateFileUtil {
+public class FileUtil {
 	// 验证字符串是否为正确路径名的正则表达式
 	private static String matches = "[A-Za-z]:\\\\[^:?\"><*]*";
 	// 通过 sPath.matches(matches) 方法的返回值判断是否正确
@@ -143,7 +143,7 @@ public class CreateFileUtil {
 			File dir = new File(dirName);// 创建目录
 			if (!dir.exists()) {
 				// 如果目录不存在则创建目录
-				if (CreateFileUtil.createDir(dirName)) {
+				if (FileUtil.createDir(dirName)) {
 					System.out.println("创建临时文件失败，不能创建临时文件所在的目录！");
 					return null;
 				}
@@ -161,14 +161,14 @@ public class CreateFileUtil {
 
 	public static void main(String[] args) {
 		String dirName = "E:/createFile/";// 创建目录
-		CreateFileUtil.createDir(dirName);// 调用方法创建目录
+		FileUtil.createDir(dirName);// 调用方法创建目录
 		String fileName = dirName + "/file1.txt";// 创建文件
-		CreateFileUtil.createFile(fileName);// 调用方法创建文件
+		FileUtil.createFile(fileName);// 调用方法创建文件
 		String prefix = "temp";// 创建临时文件
 		String surfix = ".txt";// 后缀
 		for (int i = 0; i < 10; i++) {// 循环创建多个文件
 			System.out.println("创建临时文件: "// 调用方法创建临时文件
-					+ CreateFileUtil.createTempFile(prefix, surfix, dirName));
+					+ FileUtil.createTempFile(prefix, surfix, dirName));
 		}
 	}
 }

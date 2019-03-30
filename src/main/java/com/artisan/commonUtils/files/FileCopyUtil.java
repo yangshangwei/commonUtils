@@ -92,7 +92,6 @@ public class FileCopyUtil {
 					File newDir = new File(destDir, anItem.getName());
 					System.out.println("CREATED DIR: " + newDir.getAbsolutePath());
 					newDir.mkdir();
-
 					// copy the directory (recursive call)
 					copyDirectory(anItem, newDir);
 				} else {

@@ -1,16 +1,15 @@
 package com.artisan.commonUtils.DataStructures.StacksAndQueues;
 
-import com.artisan.commonUtils.DataStructures.Array.Array;
 
 public class ArrayStack<E> implements Stack<E> {
-    private Array<E> array;
+    private Array01<E> array;
 
     public ArrayStack(int capacity){
-        array = new Array<>(capacity);
+        array = new Array01<>(capacity);
     }
 
     public ArrayStack(){
-        array = new Array<>();
+        array = new Array01<>();
     }
 
     @Override
